@@ -3,12 +3,14 @@
 #include <string>
 #include <map>
 
-typedef std::map<std::string, std::string> Param;
+namespace HTTP {
+	typedef std::map<std::string, std::string> Param;
+};
 
 class Http {
 private:
 	std::string method;
-	Param param;
+	HTTP::Param param;
 public:
 	Http() {
 		char* tmp = getenv("REQUEST_METHOD");
