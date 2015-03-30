@@ -14,7 +14,7 @@ private:
     std::string cookie;
     HTTP::Param param;
 
-    void parse_parameter(std::istream &input) 
+    void parse_parameter(std::istream &input)
     {
         std::string tmp;
         while (getline(input, tmp, '&')) {
