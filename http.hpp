@@ -9,13 +9,12 @@ namespace HTTP {
 };
 
 class Http {
-private:
+ private:
     std::string method;
     std::string cookie;
     HTTP::Param param;
 
-    void parse_parameter(std::istream &input) 
-    {
+    void parse_parameter(const std::istream &input) {
         std::string tmp;
         while (getline(input, tmp, '&')) {
             int pos = tmp.find("=");
@@ -23,7 +22,7 @@ private:
         }
     }
 
-public:
+ public:
     Http() {
         const char* tmp = getenv("REQUEST_METHOD");
         if (tmp == nullptr) {
