@@ -14,12 +14,7 @@ class Http {
     std::string cookie;
     HTTP::Param param;
 
-<<<<<<< HEAD
     void parse_parameter(const std::istream &input) {
-=======
-    void parse_parameter(std::istream &input)
-    {
->>>>>>> c08e6e3543ebff3014bea082960e908fee87fabc
         std::string tmp;
         while (getline(input, tmp, '&')) {
             int pos = tmp.find("=");
